@@ -1,3 +1,4 @@
+import Navbar from "@/components/navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 import "@/styles/globals.css";
 
@@ -24,10 +25,11 @@ export default function RootLayout({
       <body className={`font-sans ${inter.variable}`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
+          <Navbar />
           {children}
         </ThemeProvider>
       </body>
